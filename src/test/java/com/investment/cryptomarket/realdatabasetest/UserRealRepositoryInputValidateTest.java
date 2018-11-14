@@ -1,7 +1,7 @@
-package com.investment.cryptomarket.cryptomarket;
+package com.investment.cryptomarket.realdatabasetest;
 
 
-import com.investment.cryptomarket.businesslogic.builders.User;
+import com.investment.cryptomarket.businesslogic.builders.user.User;
 import com.investment.cryptomarket.businesslogic.database.UserRepository;
 
 import org.junit.Test;
@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserRepositoryInputCheckTest {
+public class UserRealRepositoryInputValidateTest {
     @Autowired
     private UserRepository userRepository;
 

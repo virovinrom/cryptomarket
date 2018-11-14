@@ -1,8 +1,19 @@
-package com.investment.cryptomarket.businesslogic.builders;
+package com.investment.cryptomarket.businesslogic.builders.crypto;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "crypto")
 public class Crypto {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column(name = "title", nullable = false, unique = true)
     private String title;
+
+    @Column(name = "currency", nullable = false, unique = true)
     private Double currency;
 
     public Long getId() {

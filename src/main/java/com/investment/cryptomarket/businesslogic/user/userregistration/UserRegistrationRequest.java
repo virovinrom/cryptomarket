@@ -1,6 +1,4 @@
-package com.investment.cryptomarket.businesslogic.userregistration;
-
-import org.springframework.stereotype.Component;
+package com.investment.cryptomarket.businesslogic.user.userregistration;
 
 
 public class UserRegistrationRequest {

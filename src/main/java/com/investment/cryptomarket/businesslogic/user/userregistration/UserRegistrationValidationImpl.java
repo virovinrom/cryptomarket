@@ -1,8 +1,9 @@
-package com.investment.cryptomarket.businesslogic.userregistration;
+package com.investment.cryptomarket.businesslogic.user.userregistration;
 
 import com.investment.cryptomarket.businesslogic.Errors;
-import com.investment.cryptomarket.businesslogic.builders.User;
+import com.investment.cryptomarket.businesslogic.builders.user.User;
 import com.investment.cryptomarket.businesslogic.database.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.Optional;
 
 @Component
 public class UserRegistrationValidationImpl implements UserRegistrationValidator {
-//@Autowired
+    @Autowired
     private UserRepository userRepository;
 
     @Override

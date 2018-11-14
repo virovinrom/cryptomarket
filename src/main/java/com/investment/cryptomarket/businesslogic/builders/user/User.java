@@ -1,12 +1,13 @@
-package com.investment.cryptomarket.businesslogic.builders;
+package com.investment.cryptomarket.businesslogic.builders.user;
 
 import javax.persistence.*;
 
 @Entity
+@Table(name = "user")
 public class User {
     @Id
-    //@Column(name = "id")
-    @GeneratedValue//(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "login", nullable = false, unique = true)

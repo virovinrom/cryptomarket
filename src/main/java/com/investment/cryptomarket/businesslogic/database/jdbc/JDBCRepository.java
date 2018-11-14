@@ -50,7 +50,7 @@ public abstract class JDBCRepository {
         try{
             return DriverManager.getConnection(jdbcUrl, userName, password);
         } catch (SQLException e) {
-            System.out.println("Exception while getting connection to database");
+            System.out.println("Exception while getting connection to realdatabasetest");
             e.printStackTrace();
             throw new RuntimeException(e);
         }
@@ -62,7 +62,7 @@ public abstract class JDBCRepository {
                 connection.close();
             }
         } catch (SQLException e) {
-            System.out.println("Exception while closing connection to database");
+            System.out.println("Exception while closing connection to realdatabasetest");
             e.printStackTrace();
             throw new RuntimeException(e);
         }

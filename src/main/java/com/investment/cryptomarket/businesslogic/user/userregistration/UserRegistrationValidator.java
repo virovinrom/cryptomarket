@@ -1,4 +1,4 @@
-package com.investment.cryptomarket.businesslogic.userregistration;
+package com.investment.cryptomarket.businesslogic.user.userregistration;
 
 import com.investment.cryptomarket.businesslogic.Errors;
 

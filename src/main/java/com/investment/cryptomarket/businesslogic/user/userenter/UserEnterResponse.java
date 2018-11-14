@@ -1,10 +1,10 @@
-package com.investment.cryptomarket.businesslogic.userregistration;
+package com.investment.cryptomarket.businesslogic.user.userenter;
 
 import com.investment.cryptomarket.businesslogic.Errors;
 
 import java.util.List;
 
-public class UserRegistrationResponse {
+public class UserEnterResponse {
 
     private Long userId;
 
@@ -12,13 +12,13 @@ public class UserRegistrationResponse {
 
     private List<Errors> errors;
 
-    public UserRegistrationResponse(Long userId) {
+    public UserEnterResponse(Long userId) {
         this.userId = userId;
         this.success = true;
         this.errors = null;
     }
 
-    public UserRegistrationResponse(List<Errors> errors) {
+    public UserEnterResponse(List<Errors> errors) {
         this.userId = null;
         this.success = false;
         this.errors = errors;

@@ -1,9 +1,9 @@
-package com.investment.cryptomarket.views.userregistration;
+package com.investment.cryptomarket.views;
 
 import com.investment.cryptomarket.businesslogic.database.UserRepository;
-import com.investment.cryptomarket.businesslogic.userregistration.UserRegistrationRequest;
-import com.investment.cryptomarket.businesslogic.userregistration.UserRegistrationResponse;
-import com.investment.cryptomarket.businesslogic.userregistration.UserRegistrationService;
+import com.investment.cryptomarket.businesslogic.user.userregistration.UserRegistrationRequest;
+import com.investment.cryptomarket.businesslogic.user.userregistration.UserRegistrationResponse;
+import com.investment.cryptomarket.businesslogic.user.userregistration.UserRegistrationService;
 import com.investment.cryptomarket.views.View;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,8 +14,9 @@ import java.util.Scanner;
 public class UserRegistrationView implements View {
     @Autowired
     private UserRegistrationService service;
-@Autowired
-private UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
+
     @Override
     public void execute() {
 
@@ -31,7 +32,7 @@ private UserRepository userRepository;
         UserRegistrationResponse response = service.register(userRegistrationRequest);
 
         if (response.isSuccess()) {
-            System.out.println("Product successfully added to list!");
+            System.out.println("User successfully registered!");
             System.out.println();
         } else {
             response.getErrors().forEach(error -> {

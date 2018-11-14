@@ -1,9 +1,7 @@
 package com.investment.cryptomarket.businesslogic.database;
 
-import com.investment.cryptomarket.businesslogic.builders.User;
-import org.springframework.data.jpa.repository.Query;
+import com.investment.cryptomarket.businesslogic.builders.user.User;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

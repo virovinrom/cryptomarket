@@ -1,12 +1,8 @@
-package com.investment.cryptomarket.cryptomarket;
+package com.investment.cryptomarket.businesslogic;
 
-import com.investment.cryptomarket.businesslogic.Errors;
-import com.investment.cryptomarket.businesslogic.database.UserRepository;
-import com.investment.cryptomarket.businesslogic.userregistration.*;
-import org.junit.Before;
+import com.investment.cryptomarket.businesslogic.user.userregistration.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

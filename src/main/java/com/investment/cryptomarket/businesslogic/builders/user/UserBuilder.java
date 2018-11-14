@@ -1,4 +1,4 @@
-package com.investment.cryptomarket.businesslogic.builders;
+package com.investment.cryptomarket.businesslogic.builders.user;
 
 public class UserBuilder {
     private Long id;

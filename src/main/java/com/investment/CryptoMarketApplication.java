@@ -1,7 +1,7 @@
 package com.investment;
 
 import com.investment.cryptomarket.views.View;
-import com.investment.cryptomarket.views.userregistration.UserRegistrationView;
+import com.investment.cryptomarket.views.UserRegistrationView;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 
-@SpringBootApplication(scanBasePackages = { "com.investment.cryptomarket.businesslogic",  "com.investment.cryptomarket.views"})
+@SpringBootApplication
 public class CryptoMarketApplication {
 
     public static void main(String[] args) {
