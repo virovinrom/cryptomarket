@@ -30,7 +30,7 @@ public class UserEnterValidationTest {
     private UserEnterService userEnterService;
     @Autowired
     private AddMoneyService addMoneyService;
-    User user = new User();
+    private User user = new User();
 
     @Before
     public void setUp() {
