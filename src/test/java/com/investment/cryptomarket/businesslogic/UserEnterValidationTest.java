@@ -59,6 +59,6 @@ public class UserEnterValidationTest {
     public void AddMoneyResponseTest(){
         AddMoneyRequest request = new AddMoneyRequest(user,428.50);
         AddMoneyResponse response = addMoneyService.add(request);
-        assertThat(user.getCount()).isEqualTo(428.50);
+        assertThat(userRepository.findByLogin(user.getLogin()).get().getMoney()).isEqualTo(428.50);
     }
 }
