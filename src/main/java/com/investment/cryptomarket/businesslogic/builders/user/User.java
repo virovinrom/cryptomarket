@@ -16,15 +16,15 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "count")
-    private double count;
+    @Column(name = "money")
+    private double money;
 
-    public double getCount() {
-        return count;
+    public double getMoney() {
+        return money;
     }
 
-    public void setCount(double count) {
-        this.count += count;
+    public void setMoney(double money) {
+        this.money += money;
     }
 
     public Long getId() {

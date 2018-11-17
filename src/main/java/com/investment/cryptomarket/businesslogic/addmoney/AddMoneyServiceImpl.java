@@ -20,7 +20,7 @@ public class AddMoneyServiceImpl implements AddMoneyService {
         if (!validationErrors.isEmpty()) {
             return new AddMoneyResponse(validationErrors);
         }
-        request.getUser().setCount(request.getMoney());
+        request.getUser().setMoney(request.getMoney());
         repository.save(request.getUser());
         return new AddMoneyResponse(request.getUser().getId());
     }
