@@ -24,7 +24,7 @@ public class User {
     }
 
     public void setCount(double count) {
-        this.count = count;
+        this.count += count;
     }
 
     public Long getId() {

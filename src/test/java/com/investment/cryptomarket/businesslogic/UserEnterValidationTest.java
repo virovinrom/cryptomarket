@@ -1,6 +1,9 @@
 package com.investment.cryptomarket.businesslogic;
 
 import com.investment.cryptomarket.SpringComponentConfig;
+import com.investment.cryptomarket.businesslogic.addmoney.AddMoneyRequest;
+import com.investment.cryptomarket.businesslogic.addmoney.AddMoneyResponse;
+import com.investment.cryptomarket.businesslogic.addmoney.AddMoneyService;
 import com.investment.cryptomarket.businesslogic.builders.user.User;
 import com.investment.cryptomarket.businesslogic.database.UserRepository;
 import com.investment.cryptomarket.businesslogic.user.userenter.*;
@@ -24,12 +27,14 @@ public class UserEnterValidationTest {
     @Autowired
     private UserRepository userRepository;
     @Autowired
-    private UserEnterService service;
-
+    private UserEnterService userEnterService;
+    @Autowired
+    private AddMoneyService addMoneyService;
+    User user = new User();
 
     @Before
     public void setUp() {
-        User user = new User();
+
         user.setLogin("slavaTest");
         user.setPassword("password");
         userRepository.save(user);
@@ -44,10 +49,16 @@ public class UserEnterValidationTest {
     @Test
     public void UserPasswordValidationTest() {
         UserEnterRequest request = new UserEnterRequest("slavaTest", "wrongpassword");
-        UserEnterResponse response = service.enter(request);
+        UserEnterResponse response = userEnterService.enter(request);
         List<Errors> errors = response.getErrors();
         assertEquals(errors.size(), 1);
         assertEquals(errors.get(0).getField(), "password");
         assertEquals(errors.get(0).getErrorMessage(), "Incorrect password");
+    }
+    @Test
+    public void AddMoneyResponseTest(){
+        AddMoneyRequest request = new AddMoneyRequest(user,428.50);
+        AddMoneyResponse response = addMoneyService.add(request);
+        assertThat(user.getCount()).isEqualTo(428.50);
     }
 }
