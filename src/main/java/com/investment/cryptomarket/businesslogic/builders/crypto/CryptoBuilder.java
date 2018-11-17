@@ -7,7 +7,7 @@ public class CryptoBuilder {
 
     private CryptoBuilder() {}
 
-    public static CryptoBuilder cryptoBuilder() {
+    public static CryptoBuilder createCrypto() {
         return new CryptoBuilder();
     }
 

@@ -5,7 +5,9 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
+
 @Repository
 public interface CryptoRepository extends CrudRepository<Crypto, Integer> {
-    List<Crypto> findByTitle(String login);
+    Optional<Crypto> findByTitle(String title);
 }
