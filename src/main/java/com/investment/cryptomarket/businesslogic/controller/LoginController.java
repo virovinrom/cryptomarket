@@ -13,21 +13,16 @@ import java.util.Map;
 @Controller
 public class LoginController {
 
-//    @GetMapping("/")
-//    public ModelAndView userForm() {
-//        Map<String, User> user = new HashMap<>();
-//        user.put("user", new User());
-//        return new ModelAndView("userlogin", user);
-//    }
-
     @GetMapping("/")
-    public String userForm(Model model) {
-        model.addAttribute("user", new User());
-        return "userlogin";
+    public ModelAndView userForm() {
+        Map<String, User> user = new HashMap<>();
+        user.put("user", new User());
+        return new ModelAndView("userlogin", user);
     }
 
+
     @PostMapping("/")
-    public String userEnter(@ModelAttribute User user) {
+    public String userEnter(@RequestBody User user) { //@ModelAttribute
         user.getLogin();
         return "result";
     }
