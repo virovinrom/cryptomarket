@@ -22,8 +22,8 @@ public class LoginController {
 
 
     @PostMapping("/")
-    public String userEnter(@RequestBody User user) { //@ModelAttribute
-        user.getLogin();
+    public String userEnter(@ModelAttribute User user) {
+        //user.getLogin();
         return "result";
     }
 
