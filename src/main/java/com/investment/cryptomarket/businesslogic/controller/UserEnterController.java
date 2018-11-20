@@ -6,18 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 public class UserEnterController {
-//    @Autowired
-//    private UserRepository userRepository;
-//
-//    @GetMapping("/{login}")
-//    public User getUser(@PathVariable String user) {
-//        return userRepository.findByLogin(user).get();
-//    }
-//    @PostMapping("/login")
-//    public String userSubmit(@ModelAttribute User user) {
-//    //user.getLogin();
-//        return "/result.html";
-//}
+
+    @RequestMapping("/")
+    public User greeting(User user) {
+        return user;
+    }
+
+
 }

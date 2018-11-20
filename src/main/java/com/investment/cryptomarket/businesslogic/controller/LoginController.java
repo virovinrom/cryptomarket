@@ -18,13 +18,6 @@ public class LoginController {
         Map<String, User> user = new HashMap<>();
         user.put("user", new User());
         return new ModelAndView("userlogin", user);
+
     }
-
-
-    @PostMapping("/")
-    public String userEnter(@ModelAttribute User user) {
-        //user.getLogin();
-        return "result";
-    }
-
 }
