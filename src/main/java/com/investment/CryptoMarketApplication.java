@@ -17,15 +17,10 @@ public class CryptoMarketApplication {
 
 
         SpringApplication.run(CryptoMarketApplication.class, args);
-        Map<Integer, View> userMainMenu = new HashMap<>();
-        UserRegistrationView userRegistrationView = new UserRegistrationView();
-        userRegistrationView.execute();
-//        while (true) {
-//            printProgramMenu();
-//            int menuItem = getFromUserMenuItemToExecute();
-//            View view = userMainMenu.get(menuItem);
-//            view.execute();
-//        }
+//        Map<Integer, View> userMainMenu = new HashMap<>();
+//        UserRegistrationView userRegistrationView = new UserRegistrationView();
+//        userRegistrationView.execute();
+
     }
 
     private static void printProgramMenu() {

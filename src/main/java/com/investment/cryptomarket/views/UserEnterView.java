@@ -4,9 +4,10 @@ import com.investment.cryptomarket.businesslogic.user.userenter.UserEnterRequest
 import com.investment.cryptomarket.businesslogic.user.userenter.UserEnterResponse;
 import com.investment.cryptomarket.businesslogic.user.userenter.UserEnterService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
-
+@Component
 public class UserEnterView implements View {
     @Autowired
     private UserEnterService service;
